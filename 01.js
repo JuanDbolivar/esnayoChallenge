@@ -11,7 +11,9 @@ function soloNumeros(array) {
   // soloNumeros([1, 'Henry', 2]) debe retornar [1, 2]
 
   // Tu código aca:
-
+  const cosa = array
+  const otraCosa = cosa.filter(cosa => cosa >= 0 || cosa <= 0);
+  return otraCosa;
 }
 
 // No modifiques nada debajo de esta linea //
