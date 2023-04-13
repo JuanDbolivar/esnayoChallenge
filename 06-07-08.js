@@ -54,11 +54,12 @@ function crearClasePersona() {
       // persona.getHobbies() debe devolver ['correr', 'dormir', 'nadar']
 
       // Tu código aca:
-      let hobbyPersona = []
-      for (let i = 0; i < this.hobbies.length; i++) {
-        hobbyPersona.push(this.hobbies[i])
-      }
-      return hobbyPersona
+      // let hobbyPersona = []
+      // for (let i = 0; i < this.hobbies.length; i++) {
+      //   hobbyPersona.push(this.hobbies[i])
+      // }
+      // return hobbyPersona
+      return this.hobbies
     }
 
     getPromedioEdad() {
@@ -77,15 +78,20 @@ function crearClasePersona() {
       // persona.getPromedioEdad() debería devolver 29 ya que (33 + 25) / 2 = 29
 
       // Tu código aca:
-      let newArray = []
+      // let newArray = []
+      // for (let i = 0; i < this.amigos.length; i++) {
+      //   newArray.push(this.amigos[i].edad)
+      // }
+      // var i = 0, sum = 0, promArray = newArray.length
+      // while (i < promArray) {
+      //   sum = sum + newArray[i++];
+      // }
+      // return sum / promArray;
+      let totalEdades = 0;
       for (let i = 0; i < this.amigos.length; i++) {
-        newArray.push(this.amigos[i].edad)
+        totalEdades += this.amigos[i].edad
       }
-      var i = 0, sum = 0, promArray = newArray.length
-      while (i < promArray) {
-        sum = sum + newArray[i++];
-      }
-      return sum / promArray;
+      return totalEdades / this.amigos.length
     }
   };
 
